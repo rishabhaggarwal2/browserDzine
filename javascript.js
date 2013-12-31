@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//Global Variables
 	var adjectives = new Array();
 	var no_of_adjectives = 0;
-	$(".variables, .sample, .footer").hide();
+	$(".variables, .sample, .footer, .copythis").hide();
 	var check_suggested_type=0;
 	var check_custom_type=0;
 	var fontname;
@@ -13,7 +13,7 @@ $(document).ready(function(){
 	console.log("Hello");
 
 	if(random==0)
-		$("span.tagline").html("Coz There are better things to do on Diwali than burn crackers");
+		$("span.tagline").html("Coz web prototyping should be based in the browser");
 	if(random==1)
 		$("span.tagline").html("The ultimate design resource");
 	if(random==2)
@@ -130,7 +130,9 @@ $(document).ready(function(){
 			loadjscssfile("http://fonts.googleapis.com/css?family=Abel", "css", "Abel");
 		}
 
-
+		if(suggestedcolor=="gadar"){
+			alert("Aap Faad bandey ho! Respect!");
+		}
 
 
 	}
@@ -171,6 +173,9 @@ $(document).ready(function(){
 			}
 			else if(checkthiscolor.indexOf("play")!=-1||checkthiscolor.indexOf("fun")!=-1||checkthiscolor.indexOf("child")!=-1||checkthiscolor.indexOf("baby")!=-1){				
 				setcolorsuggestion("child");
+			}
+			else if(checkthiscolor.indexOf("gadar")!=-1||checkthiscolor.indexOf("gaddar")!=-1){				
+				setcolorsuggestion("gadar");
 			}
 		}
 
@@ -337,13 +342,40 @@ $(document).ready(function(){
 	});
 
 	
+	/*function callme(){
+		var givethis = $('.sample').html();
+		var temp = $("head").html();
+		console.log(temp);
+		var full=temp + givethis;
+		var givethis2 = full.replace(/</g, '&lt;');
+		givethis2 = givethis2.replace(/>/g, '&gt;<br>');
+		givethis2 = givethis2.replace("style.css","http://creativiz.net/apps/browserDzine/style.css");
+		console.log(givethis2);
+		$(".copythis").html(givethis2);
+		$(".copythis").prepend("<b>//Here's Your Code!</b><br><br>");
+	}*/
 
+	function callme(){
+		var givethis = $('.sample').html();
+		var temp = $("head").html();
+		console.log(temp);
+		var full=temp + givethis;
+		var givethis2 = full.replace(/</g, '&lt;');
+		givethis2 = givethis2.replace(/>/g, '&gt;<br>');
+		givethis2 = givethis2.replace("style.css","http://creativiz.net/apps/browserDzine/style.css");
+		$(".copythis").html(givethis2);
+		$(".copythis").prepend("<b>//Here's Your Code!</b><br><br>");
+	}
 	//Show the sample
 	$(".done2").click(function(){
 		var x = $(".sample").offset().top;
 		x=x+650;
 		$('html, body').animate({scrollTop:x}, 1000);
 		$(".sample").fadeIn(4000);
+		$(".copythis").fadeIn(2000);
 		$(".footer").fadeIn(2000);
+		console.log($('.sample').html());
+		callme();
 	});
+
 });
