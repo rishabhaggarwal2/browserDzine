@@ -10,9 +10,11 @@
   border-radius: 8px;
   background: #999;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
+
 ::-webkit-scrollbar-thumb:active {
   background: #333;
 }
@@ -29,13 +31,14 @@
   border-radius: 8px;
   background: #999;
 }
+
 ::-moz-scrollbar-thumb:hover {
   background: #666;
 }
+
 ::-moz-scrollbar-thumb:active {
   background: #333;
 }
-
 
 body, html {
   margin: 0px;
@@ -45,23 +48,23 @@ body, html {
   font-size: 16px;
   line-height: 1.5;
   color: #333333;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 hr {
   clear: both;
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
+  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
 }
 
 .nav {
-  height: 300px;
   background: #3498db;
 }
+
 .nav h1 {
   font-family: "Montez", Monotype Corsiva;
   font-weight: 400;
@@ -69,32 +72,37 @@ hr {
   font-size: 77px;
   line-height: 1.3;
 }
+
 .nav b {
   color: #2c3e50;
-
 }
-.nav p b
-{
+
+.nav p b {
   font-family: "Roboto";
   font-size: 1.4em;
   font-weight: 300;
   color: #2c3e50;
 }
-.nav a
-{
+
+.nav a {
   text-decoration: none;
   color: #ecf0f1;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
-.nav a:hover
-{
-  border-bottom: 1px solid #2c3e50;
+
+.nav a:hover {
+  border-bottom: 1px dotted #2c3e50;
 }
-.nav em
-{
+
+.nav em {
   color: #FFD53E;
 }
-.nav p
-{
+
+.nav p {
   margin-top: -40px;
   color: #ecf0f1;
   width: 90%;
@@ -104,6 +112,7 @@ hr {
   font-weight: 300;
   letter-spacing: 0em;
 }
+
 .nav span.tagline {
   position: relative;
   top: -65px;
@@ -117,6 +126,7 @@ hr {
   width: 90%;
   margin: auto;
 }
+
 .content h2 {
   font-family: "Oswald", Rockwell, sans-serif;
   font-size: 2.25em;
@@ -125,6 +135,7 @@ hr {
   text-transform: uppercase;
   color: #2c3e50;
 }
+
 .content h3 {
   font-family: "Oswald", Rockwell, sans-serif;
   font-size: 2em;
@@ -133,6 +144,7 @@ hr {
   text-transform: uppercase;
   color: #34495e;
 }
+
 .content h4 {
   font-family: "Oswald", Rockwell, sans-serif;
   font-size: 1.75em;
@@ -141,6 +153,7 @@ hr {
   text-transform: none;
   color: #34495e;
 }
+
 .content input[type="text"], .content input[type="url"], .content input[type="name"] {
   padding: 10px;
   background: #fff;
@@ -152,12 +165,14 @@ hr {
   transition: all 0.3s;
   font-family: #333333;
 }
+
 .content input[type="text"]:hover, .content input:focus, .content input[type="name"]:hover, .content input[type="url"]:hover {
   padding: 10px;
   background: #fff;
   border: 2px solid #3498db;
   outline: none;
 }
+
 .content .adjective_container div {
   padding: 10px;
   margin-right: 5px;
@@ -168,6 +183,7 @@ hr {
   color: #ecf0f1;
   border: 2px solid #c0392b;
 }
+
 .content .done {
   background: #3498db;
   width: 70px;
@@ -184,9 +200,11 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .content .done:hover {
   background: #2980b9;
 }
+
 .content .variables .done2 {
   clear: both;
   background: #3498db;
@@ -205,26 +223,32 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .content .variables .done2:hover {
   background: #2980b9;
 }
+
 .content .variables em {
   font-style: italic;
   font-weight: 300;
 }
+
 .content .variables .col2 {
   margin-top: 0px;
   position: relative;
   top: 0px;
   float: left;
 }
+
 .content .variables .col1 {
   float: right;
 }
+
 .content .variables .col1, .content .variables .col2 {
   width: 46%;
   display: inline-block;
 }
+
 .content .variables .col1 a, .content .variables .col2 a {
   color: #999;
   text-decoration: none;
@@ -236,9 +260,11 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .content .variables .col1 a:hover, .content .variables .col2 a:hover {
   color: #333333;
 }
+
 .content .variables .col1 .custom textarea, .content .variables .col2 .custom textarea {
   background: #187dec;
   padding-top: 40px;
@@ -261,12 +287,15 @@ hr {
   transition: all 0.2s;
   color: #fff;
 }
+
 .content .variables .col1 .custom textarea:hover, .content .variables .col2 .custom textarea:hover {
   background: #2c3e50;
 }
+
 .content .variables .col1 .custom textarea:focus, .content .variables .col2 .custom textarea:focus {
   outline: none;
 }
+
 .content .variables .col1 .custom, .content .variables .col2 .custom {
   background: #eee;
   margin-bottom: 5px;
@@ -277,18 +306,23 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .content .variables .col1 .custom h4, .content .variables .col2 .custom h4 {
   margin-left: -15px;
 }
+
 .content .variables .col1 .custom .frozen, .content .variables .col2 .custom .frozen {
   background: #aaa;
 }
+
 .content .variables .col1 .frozen, .content .variables .col2 .frozen {
   background: #aaa;
 }
+
 .content .variables .col1 .custom:hover, .content .variables .col2 .custom:hover {
   background: #ccc;
 }
+
 .content .variables .col1 .suggestions .suggestion, .content .variables .col2 .suggestions .suggestion {
   background: #eee;
   margin-bottom: 5px;
@@ -299,6 +333,7 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .content .variables .col1 .suggestions .suggestion div, .content .variables .col2 .suggestions .suggestion div {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -310,12 +345,15 @@ hr {
   margin-right: 0px;
   margin-left: 0px;
 }
+
 .content .variables .col1 .suggestions .suggestion:hover, .content .variables .col2 .suggestions .suggestion:hover {
   background: #ccc;
 }
+
 .content .variables .col1 .suggestions .frozen, .content .variables .col2 .suggestions .frozen {
   background: #aaa;
 }
+
 .content .variables .col1 .putted, .content .variables .col2 .putted {
   margin-top: -20px;
   background: #eee;
@@ -327,10 +365,12 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .content .variables .col1 .putted, .content .variables .col2 .putted {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+
 .content .variables .col1 .fontcustom .suggestion, .content .variables .col2 .fontcustom .suggestion {
   padding-top: 1px;
   padding-bottom: 10px;
@@ -340,25 +380,31 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .content .variables .col1 .putted:hover, .content .variables .col1 .fontcustom .suggestion:hover, .content .variables .col2 .putted:hover, .content .variables .col2 .fontcustom .suggestion:hover {
   background: #ccc;
 }
+
 .content .variables .col1 h4.suggestedheading, .content .variables .col2 h4.suggestedheading {
   color: #000;
   font-size: 3em;
   line-height: 1.5;
 }
+
 .content .variables .col1 p.suggestedtext, .content .variables .col2 p.suggestedtext {
   font-size: 1em;
   font-weight: normal;
   margin-top: -60px;
 }
+
 .content .variables .col1 .frozen, .content .variables .col2 .frozen {
   background: #aaa;
 }
+
 .content .variables .frozen {
   background: #aaa;
 }
+
 .content .frozen {
   background: #aaa;
 }
@@ -367,38 +413,48 @@ hr {
   padding-left: 10%;
   padding-right: 10%;
 }
+
 .sample span {
   font-family: "Oswald", Rockwell, sans-serif;
   font-size: 2.5em;
 }
+
 .sample h1 {
   font-size: 2.5em;
 }
+
 .sample h2 {
   font-size: 2em;
 }
+
 .sample h3 {
   font-size: 1.5em;
 }
+
 .sample h4 {
   font-size: 1.25em;
 }
+
 .sample p {
   font-size: 1em;
   line-height: 1.5;
 }
+
 .sample img {
   width: 99%;
   border-radius: 20px;
 }
+
 .sample .caption {
   font-size: 1.25em;
   line-height: 1;
 }
+
 .sample blockquote {
   border-left: 5px solid #ccc;
   padding: 10px;
 }
+
 .sample input[type="name"] {
   width: 200px;
   background: #eee;
@@ -412,14 +468,17 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .sample input[type="name"]:focus {
   color: #000;
   border: 2px solid #3498db;
   outline: none;
 }
+
 .sample input[type="name"]:hover {
   margin-left: 10px;
 }
+
 .sample textarea {
   width: 600px;
   height: 200px;
@@ -435,14 +494,17 @@ hr {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .sample textarea:focus {
   color: #000;
   border: 2px solid #3498db;
   outline: none;
 }
+
 .sample textarea:hover {
   margin-left: 10px;
 }
+
 .sample .circles div {
   display: inline-block;
   height: 100px;
@@ -457,6 +519,7 @@ hr {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 .sample .circles div:hover {
   top: -10px;
 }
@@ -479,4 +542,22 @@ hr {
 
 .footer a:hover {
   border-bottom: 1px solid #aaa;
+}
+
+.copythis {
+  display: block;
+  outline: none;
+  width: 70%;
+  padding: 20px;
+  margin: auto;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #222;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: Roboto;
+  border-left: 5px solid #000;
 }
